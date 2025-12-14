@@ -1,9 +1,19 @@
-export default function Home() {
-  return (
-    <main className="min-h-screen flex items-center justify-center">
-      <h1 className="text-3xl font-bold text-blue-600">
-        EduPlus – Micro Learning Platform
-      </h1>
-    </main>
-  );
+// import { redirect } from "next/navigation";
+
+// export default function Home() {
+//   redirect("/login");
+// }
+
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
+import { authOptions } from "@/lib/auth";
+
+export default async function Home() {
+  const session = await getServerSession(authOptions);
+
+  if (session) {
+    redirect("/dashboard");
+  }
+
+  redirect("/login");
 }
