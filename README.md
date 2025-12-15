@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# EduPlus
 
-## Getting Started
+EduPlus is a modern EdTech web application that enables **educators to create structured courses and lessons**, while **students can explore and learn through curated content enhanced with AI-generated summaries**.
 
-First, run the development server:
+The platform focuses on clean UX, role-based access, and practical full-stack implementation.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Authentication & Roles
+- Secure authentication using **NextAuth (Credentials)**
+- Role-based access:
+  - **Educator** – create, edit, delete courses and lessons
+  - **Student** – browse courses and view lessons
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Courses & Lessons (Full CRUD)
+- Create, update, delete courses
+- Add, edit, delete lessons under each course
+- Text-based lesson content with optional reference links
+- Relational data handled via Prisma & PostgreSQL
 
-## Learn More
+### AI-Powered Course Summary
+- Generates a concise summary using **Google Gemini AI**
+- Uses course title, description, and lesson content
+- Gracefully handles missing AI quota
 
-To learn more about Next.js, take a look at the following resources:
+### UI & UX
+- Clean dashboard with role-based content
+- Consistent top bar and sidebar layout
+- Responsive, production-style UI using **Tailwind CSS & shadcn/ui**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tech Stack
 
-## Deploy on Vercel
+- **Frontend:** Next.js (App Router), React, Tailwind CSS, shadcn/ui
+- **Backend:** Next.js Route Handlers
+- **Authentication:** NextAuth.js
+- **Database:** PostgreSQL
+- **ORM:** Prisma
+- **AI Integration:** Google Gemini API
+- **Deployment:** Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Demo Credentials
+
+Use the following credentials to explore the platform:
+
+### Educator
+- **Email:** educator@eduplus.com  
+- **Password:** EduPlus@123  
+
+### Student
+- **Email:** student@eduplus.com  
+- **Password:** EduPlus@123  
+
+---
+
+## Environment Variables
+
+The following environment variables are required:
+
+```env
+DATABASE_URL=
+NEXTAUTH_SECRET=
+NEXTAUTH_URL=
+GEMINI_API_KEY=
+
+---
+
+## Project Highlights
+
+- Full-stack application built using **Next.js App Router**
+- Role-based dashboards with **educator and student permissions**
+- Real-world **CRUD operations** implemented using **Prisma ORM**
+- **AI-powered course summaries** with graceful fallback handling
+- Clean, minimal, and evaluator-friendly UI design
+
+---
+
+## Notes
+
+- AI summaries depend on an external AI API quota.
+- If the AI quota is unavailable, the application displays a fallback message without breaking core functionality.
+
+---
+
+## Author
+
+**Mohd Zaid**  
+Full Stack Developer
+https://www.linkedin.com/in/mohd-zaid-5730a4248/

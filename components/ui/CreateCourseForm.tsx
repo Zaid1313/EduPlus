@@ -104,7 +104,7 @@ export default function CreateCourseForm({
         </SelectContent>
       </Select>
 
-      <Button type="submit" disabled={loading} className="w-full">
+      <Button type="submit" disabled={loading} className="w-full cursor-pointer">
         {loading
           ? "Saving..."
           : isEdit

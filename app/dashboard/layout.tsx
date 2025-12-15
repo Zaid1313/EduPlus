@@ -60,19 +60,11 @@ export default async function DashboardLayout({
 
       {/* Main content */}
       <main className="flex-1 flex flex-col">
-        {/* 
-        <header className="h-16 border-b flex items-center justify-between px-6 bg-card">
-          <h1 className="text-xl font-semibold">{roleLabel}</h1>
-         
-          <div className="p-6 border-t border-white/10">
-            <LogoutButton />
-          </div>
-        </header> */}
 
         <TopBar title={roleLabel} />
 
         {/* Page content */}
-        <div className="flex-1 p-6">{children}</div>
+        <div className="flex-1 px-6 pt-6">{children}</div>
       </main>
     </div>
   );

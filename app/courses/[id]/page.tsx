@@ -9,6 +9,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import TopBar from "@/components/ui/TopBar";
 import CourseActions from "./CourseActions";
+import LessonActions from "./LessonActions";
 
 export default async function CourseDetailPage({
   params,
@@ -56,6 +57,10 @@ export default async function CourseDetailPage({
             <Card key={lesson.id}>
               <CardContent className="p-4 space-y-2">
                 <p className="font-medium">{lesson.title}</p>
+
+                {session?.user.role === "EDUCATOR" && (
+                  <LessonActions lessonId={lesson.id} courseId={course.id} />
+                )}
 
                 <p className="text-sm whitespace-pre-line">{lesson.content}</p>
 

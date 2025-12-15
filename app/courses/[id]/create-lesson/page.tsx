@@ -80,7 +80,7 @@ export default function CreateLessonPage() {
           }
         />
 
-        <Button type="submit" disabled={loading}>
+        <Button className="cursor-pointer" type="submit" disabled={loading}>
           {loading ? "Adding..." : "Add Lesson"}
         </Button>
       </form>
