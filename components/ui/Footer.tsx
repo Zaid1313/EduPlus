@@ -3,14 +3,14 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="border-t bg-card text-foreground">
-      <div className="max-w-7xl mx-auto px-6 pt-4 flex flex-col md:flex-row items-center justify-between text-sm">
+      <div className="max-w-7xl mx-auto px-6 pt-4 pb-4 flex flex-col md:flex-row items-center justify-between text-sm">
         <p className="text-muted-foreground mr-2">
           © {new Date().getFullYear()} EduPlus
         </p>
 
         <div className="flex gap-4">
           <Link
-            href="https://github.com/Zaid1313"
+            href="https://github.com/Zaid1313/EduPlus"
             target="_blank"
             className="hover:text-primary transition"
           >

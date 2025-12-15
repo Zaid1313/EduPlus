@@ -5,6 +5,7 @@ import LogoutButton from "./LogoutButton";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import TopBar from "@/components/ui/TopBar";
+import Footer from "@/components/ui/Footer";
 
 export default async function DashboardLayout({
   children,
@@ -65,6 +66,10 @@ export default async function DashboardLayout({
 
         {/* Page content */}
         <div className="flex-1 px-6 pt-6">{children}</div>
+
+        <div className="mt-auto">
+        <Footer/>
+        </div>
       </main>
     </div>
   );

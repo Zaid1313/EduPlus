@@ -2,7 +2,6 @@ import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { authOptions } from "@/lib/auth";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Footer from "@/components/ui/Footer";
 
 export default async function DashboardPage() {
   const session = await getServerSession(authOptions);
@@ -77,7 +76,6 @@ export default async function DashboardPage() {
           </CardContent>
         </Card>
       </div>
-      <Footer />
     </div>
   );
 }
