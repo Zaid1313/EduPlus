@@ -10,7 +10,7 @@ export default async function DashboardPage() {
   if (!session) redirect("/login");
 
   return (
-    <>
+    <div className="flex-1 flex flex-col justify-between">
       <div className="mb-4">
         <h2 className="text-2xl font-bold mb-2">Welcome to your Dashboard</h2>
       </div>
@@ -78,6 +78,6 @@ export default async function DashboardPage() {
         </Card>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
