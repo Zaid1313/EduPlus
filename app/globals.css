@@ -119,8 +119,8 @@
   --radius: 0.625rem;
 
   /* Base */
-  --background: oklch(1 0 0);                /* white */
-  --foreground: oklch(0.12 0 0);             /* near black */
+  --background: oklch(1 0 0); /* white */
+  --foreground: oklch(0.12 0 0); /* near black */
 
   /* Cards & popovers */
   --card: oklch(1 0 0);
@@ -129,8 +129,8 @@
   --popover-foreground: oklch(0.12 0 0);
 
   /* 🔴 BRAND RED */
-  --primary: oklch(0.62 0.24 27);             /* red */
-  --primary-foreground: oklch(1 0 0);         /* white */
+  --primary: oklch(0.62 0.24 27); /* red */
+  --primary-foreground: oklch(1 0 0); /* white */
 
   --accent: oklch(0.62 0.24 27);
   --accent-foreground: oklch(1 0 0);
@@ -148,7 +148,7 @@
   /* Borders & inputs */
   --border: oklch(0.9 0 0);
   --input: oklch(0.9 0 0);
-  --ring: oklch(0.62 0.24 27);                /* red focus */
+  --ring: oklch(0.62 0.24 27); /* red focus */
 
   /* Sidebar (light) */
   --sidebar: oklch(0.98 0 0);
@@ -170,8 +170,8 @@
 
 .dark {
   /* Base */
-  --background: oklch(0.08 0 0);              /* true black */
-  --foreground: oklch(0.98 0 0);              /* white */
+  --background: oklch(0.08 0 0); /* true black */
+  --foreground: oklch(0.98 0 0); /* white */
 
   /* Cards & popovers */
   --card: oklch(0.12 0 0);
@@ -210,6 +210,11 @@
   --sidebar-accent-foreground: oklch(0.98 0 0);
   --sidebar-border: oklch(0.25 0 0);
   --sidebar-ring: oklch(0.68 0.25 27);
+}
+
+.sidebar-link {
+  @apply block rounded-md px-3 py-2 text-base font-medium 
+  hover:bg-gray-800 hover:text-red-500 transition;
 }
 
 @layer base {
